@@ -15,7 +15,7 @@ if ($conn->connect_error) {
 
 
 
-// Add task
+
 if (isset($_POST['title']) && isset($_POST['description'])) {
     $title = $_POST['title'];
     $description = $_POST['description'];
@@ -23,7 +23,7 @@ if (isset($_POST['title']) && isset($_POST['description'])) {
     $conn->query($sql);
 }
 
-// Update task status
+
 if (isset($_POST['task_id'])) {
     $task_id = $_POST['task_id'];
     $status = $_POST['status'];
@@ -31,7 +31,7 @@ if (isset($_POST['task_id'])) {
     $conn->query($sql);
 }
 
-// Fetch tasks
+
 $sql = "SELECT * FROM taskdata";
 $result = $conn->query($sql);
 ?>
